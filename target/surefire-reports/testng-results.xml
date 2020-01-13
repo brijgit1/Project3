@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="40496" started-at="2019-10-21T14:20:39 IST" finished-at="2019-10-21T14:21:19 IST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="40496" started-at="2019-10-21T14:20:39 IST" finished-at="2019-10-21T14:21:19 IST">
+      <class name="pkg.AppTest">
+        <test-method status="PASS" signature="shouldAnswerWithTrue()[pri:0, instance:pkg.AppTest@31ef45e3]" name="shouldAnswerWithTrue" duration-ms="0" started-at="2019-10-21T14:21:19 IST" finished-at="2019-10-21T14:21:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- pkg.AppTest -->
+      <class name="pkg.APIGetTest">
+        <test-method status="FAIL" signature="getStatusCheck()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="getStatusCheck" duration-ms="34570" started-at="2019-10-21T14:20:39 IST" finished-at="2019-10-21T14:21:13 IST">
+          <exception class="java.net.SocketTimeoutException">
+            <message>
+              <![CDATA[Read timed out]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.SocketTimeoutException: Read timed out
+at java.net.SocketInputStream.socketRead0(Native Method)
+at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+at java.net.SocketInputStream.read(SocketInputStream.java:171)
+at java.net.SocketInputStream.read(SocketInputStream.java:141)
+at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:259)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:209)
+at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:686)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:488)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)
+at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)
+at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)
+at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)
+at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at io.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+at io.restassured.filter.FilterContext$next.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)
+at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:166)
+at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+at pkg.APIGetTest.getStatusCheck(APIGetTest.java:18)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1249)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.SocketTimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getStatusCheck -->
+        <test-method status="PASS" signature="verifyContentType()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="verifyContentType" duration-ms="4534" started-at="2019-10-21T14:21:13 IST" finished-at="2019-10-21T14:21:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContentType -->
+        <test-method status="PASS" signature="verifyServer()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="verifyServer" duration-ms="320" started-at="2019-10-21T14:21:18 IST" finished-at="2019-10-21T14:21:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyServer -->
+        <test-method status="PASS" signature="verifyStatusCode()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="verifyStatusCode" duration-ms="321" started-at="2019-10-21T14:21:18 IST" finished-at="2019-10-21T14:21:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStatusCode -->
+        <test-method status="PASS" signature="verifyStatusLine()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="verifyStatusLine" duration-ms="331" started-at="2019-10-21T14:21:19 IST" finished-at="2019-10-21T14:21:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStatusLine -->
+        <test-method status="PASS" signature="verifyStatusLine2()[pri:0, instance:pkg.APIGetTest@57fffcd7]" name="verifyStatusLine2" duration-ms="314" started-at="2019-10-21T14:21:19 IST" finished-at="2019-10-21T14:21:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStatusLine2 -->
+      </class> <!-- pkg.APIGetTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
